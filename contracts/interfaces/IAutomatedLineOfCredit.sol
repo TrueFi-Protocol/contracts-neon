@@ -17,6 +17,15 @@ enum AutomatedLineOfCreditStatus {
 }
 
 interface IAutomatedLineOfCredit is IPortfolio, IUtilizationRate {
+    struct InterestRateParameters {
+        uint32 minInterestRate;
+        uint32 minInterestRateUtilizationThreshold;
+        uint32 optimumInterestRate;
+        uint32 optimumUtilization;
+        uint32 maxInterestRate;
+        uint32 maxInterestRateUtilizationThreshold;
+    }
+
     struct Controllers {
         IDepositController depositController;
         IWithdrawController withdrawController;

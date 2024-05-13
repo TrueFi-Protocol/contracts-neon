@@ -33,6 +33,8 @@ contract AutomatedLineOfCredit is IAutomatedLineOfCredit, ERC20Upgradeable, Upgr
     uint256 public maxSize;
     address public borrower;
     IProtocolConfig public protocolConfig;
+    // Unused, but kept for upgrade compatibility with beryllium
+    InterestRateParameters public interestRateParameters;
 
     uint256 public virtualTokenBalance;
     uint256 public borrowedAmount;
